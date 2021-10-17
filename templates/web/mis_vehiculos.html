@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Vehiculos{% endblock title %}
+{% block content %}
+<button class="btn btn-secondary my-3"><a href="{% url 'factura' %}" class="nav-link text-white">Ver Factura</a></button>
+<table class="table table-bordered">
+    <thead class="table-warning w-80  w-80">
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Tipo</th>
+            <th>Placa</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for obj in object %}
+    <tr>
+        <td>{{ obj.marca }}</td>
+        <td>{{ obj.modelo }}</td>
+        <td>{{ obj.tipo }}</td>
+        <td>{{ obj.placa}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}

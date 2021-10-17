@@ -1,0 +1,8 @@
+from django.contrib import admin
+from .models import Servicio, Vehiculo, TipoVehiculo, Factura
+
+# Register your models here.
+admin.site.register(Servicio)
+admin.site.register(Vehiculo)
+admin.site.register(TipoVehiculo)
+admin.site.register(Factura)

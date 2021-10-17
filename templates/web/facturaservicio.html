@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Facturar Servicio{% endblock title %}
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %} 
+        {{ form_f.as_p }} 
+        <input type="submit" value="Añadir" class="btn btn-success">
+    </form>
+{% endblock content %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'js/sweetAlert.js' %}"></script>

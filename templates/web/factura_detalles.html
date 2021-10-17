@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Detalles{% endblock title %}
+{% block content %}
+{{services}}
+<table class="table table-striped table-hover mt-3">
+    <thead>
+        <tr>
+            <th>Vehiculo</th>
+            <th>Servicio</th>
+            <th>Cantidad</th>
+            <th>Hora inicio</th>
+            <th>Hora fin</th>
+            <th>SubTotal</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    {% for service in services %}
+    <tr>
+        <td>{{ service.vehiculo.placa }}</td>
+        <td>{{ service.servicio.nombre }}</td>
+        <td>{{ service.cantidad }}</td>
+        <td>{{ service.hora_inicio }}</td>
+        <td>{{ service.hora_fin }}</td>
+        <td>{{ service.subtotal }}</td>
+        <td>{{ service.factura.total }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

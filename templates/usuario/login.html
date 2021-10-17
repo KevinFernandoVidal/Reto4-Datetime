@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock title %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %} 
+    {{ for_l.as_p }} 
+    <input type="submit" value="Iniciar seccion" class="btn btn-success">
+</form>
+{% endblock content %}
